@@ -3,12 +3,19 @@ API_KEY = 'e57bea001181aba9810477c2527c25ca'
 
 url = BASE_PATH + API_KEY
 
-EMAIL_RECEIVER = 'to@example.com'
-
 rules = {
     'archive': True,
-    'send_email': True,
-    # preferred default is None
-    # 'preferred': None
-    'preferred': ['USD', 'BTC', 'CAD', 'LRD']
+    'email': {
+        'enable': True,
+        'receiver': 'to@example.com',
+        'preferred': ['USD', 'BTC', 'CAD', 'LRD']
+    },
+    'notification': {
+        'enable': True,
+        'receiver': '059531',
+        'preferred': {
+            'USD': {'max': 1.092109, 'min': 1.080000},
+            'BTC': {'max': 1.3384365e-05, 'min': 1.0000000e-05}
+        }
+    }
 }
