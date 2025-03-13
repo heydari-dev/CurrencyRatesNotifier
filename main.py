@@ -3,6 +3,8 @@ from config import url, rules
 import json
 from mail import send_smtp_email
 from notification import send_sms
+from datetime import datetime
+from khayyam import JalaliDatetime
 
 
 def get_rates():
@@ -18,7 +20,8 @@ def archive(filename, rates):
 
 
 def send_mail(timestamp, rates):
-    subject = f'{timestamp} rates'
+    now = JalaliDatetime(datetime.now()).strftime("%Y-%m-%d  %H:%M:%S")
+    subject = f'{timestamp}-rates. dates: {now}'
 
     if rules['email']['preferred'] is not None:
         tmp = dict()
@@ -43,7 +46,8 @@ def check_notify_rules(rates):
 
 
 def send_notification(msg):
-    send_sms(msg)
+    now = JalaliDatetime(datetime.now()).strftime("%Y-%m-%d  %H:%M:%S")
+    send_sms(f'date: {now}\n{msg}')
 
 
 if __name__ == '__main__':
