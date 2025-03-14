@@ -24,20 +24,20 @@ A Python-based currency exchange rate monitoring system that fetches real-time d
    - Set up **email SMTP** details.
    - Configure **SMS notification settings**.
 
-## ⚡ Usage
+## Usage ⚡ 
 Run the script manually:
 ```bash
 python main.py
 ```
 Or automate execution with a **cron job** (Linux) or **Task Scheduler** (Windows).
 
-## 🛠 Configuration
+## Configuration 🛠 
 Customize `config.py` for:
 - **Email alerts** → Enable/disable & set preferred currencies.
 - **SMS notifications** → Define min/max thresholds for alerts.
 - **Archiving** → Store exchange rates for future reference.
 
-### 🔧 Example `config.py`
+### Example `config.py` 🔧 
 ```python
 rules = {
     'archive': True,
