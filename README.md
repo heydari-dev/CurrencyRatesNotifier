@@ -2,13 +2,13 @@
 
 A Python-based currency exchange rate monitoring system that fetches real-time data from [Fixer.io](https://fixer.io/), archives rates, and sends notifications via email and SMS when predefined conditions are met.
 
-## Features 🚀
+## Features
 - Fetches live exchange rates from Fixer.io API.
 - Archives exchange rates for historical reference.
 - Sends email alerts when specified currencies meet defined thresholds.
 - Sends SMS notifications for critical rate changes.
 
-## Installation 📦 
+## Installation
 
 1. Clone the repository:
    ```bash
@@ -24,20 +24,20 @@ A Python-based currency exchange rate monitoring system that fetches real-time d
    - Set up **email SMTP** details.
    - Configure **SMS notification settings**.
 
-## Usage ⚡ 
+## Usage
 Run the script manually:
 ```bash
 python main.py
 ```
 Or automate execution with a **cron job** (Linux) or **Task Scheduler** (Windows).
 
-## Configuration 🛠 
+## Configuration
 Customize `config.py` for:
 - **Email alerts** → Enable/disable & set preferred currencies.
 - **SMS notifications** → Define min/max thresholds for alerts.
 - **Archiving** → Store exchange rates for future reference.
 
-### Example `config.py` 🔧 
+### Example `config.py`
 ```python
 rules = {
     'archive': True,
@@ -55,12 +55,12 @@ rules = {
 }
 ```
 
-## Security Note 🔒
+## Security Note
 **Never expose API keys or credentials in public repositories.** Use environment variables instead.
 
-## Contributing 🤝
+## Contributing
 Feel free to fork this project and submit pull requests! Contributions are welcome.
 
-## License 📜
+## License
 This project is licensed under the MIT License.
 
