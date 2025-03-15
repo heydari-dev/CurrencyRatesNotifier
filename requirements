@@ -1,5 +1,6 @@
 certifi==2025.1.31
 charset-normalizer==3.4.1
+ghasedak_sms==1.0.3
 idna==3.10
 Khayyam==3.0.17
 requests==2.32.3
